@@ -38,7 +38,7 @@
     <script>
         function checkAnswer() {
             let answer = document.getElementById("answer").value.toLowerCase();
-            let correctAnswer = "your smile"; // Ubah jawapan di sini
+            let correctAnswer = "your smile"; //
             
             if (answer === correctAnswer) {
                 document.getElementById("message").style.display = "block";
