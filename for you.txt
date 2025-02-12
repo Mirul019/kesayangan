@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Puzzle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #ffe6e6;
+        }
+        #puzzle-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        #message {
+            display: none;
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="puzzle-box">
+        <h2>Unlock Your Special Message</h2>
+        <p>What is my favorite thing about you?</p>
+        <input type="text" id="answer" placeholder="Type your answer here...">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="message">❤️ You got it! I love you! ❤️</p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            let answer = document.getElementById("answer").value.toLowerCase();
+            let correctAnswer = "your smile"; // Ubah jawapan di sini
+            
+            if (answer === correctAnswer) {
+                document.getElementById("message").style.display = "block";
+            } else {
+                alert("Wrong answer! Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
